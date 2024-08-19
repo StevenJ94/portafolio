@@ -81,6 +81,7 @@ export class SidebarComponent {
     // Mostrar un mensaje de confirmación (opcional)
     alert('Texto copiado');
   }
+
 }
 
 interface ht {

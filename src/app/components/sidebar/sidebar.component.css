@@ -99,11 +99,12 @@ hr {
   }
 
   a:hover i{
-    color: var(--gray);
+    color: var(--terceary-color);
   }
 
 .__titulo-text {
   color: var(--green) !important;
+  font-weight: 700;
 }
 
 .__cv {  
