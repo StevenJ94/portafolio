@@ -1,12 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+
 :root {
-    --primary-color: #06141B;
-    --secondary-color: #11212D;
-    --terceary-color: #253745;
-    --white-secondary-color: #9BABAB;
-    --white-primary-color: #CCD0DF;
+    --primary-color: #1e1e28;
+    --secondary-color: #20202a;
+    --terceary-color: #2d2d39;
+    --linkedin: #0a66c2;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #72bb55;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #989da1;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --dark-secondary: #303030;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; padding: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: var(--primary-color);}
+body { margin: 0; padding: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: var(--dark-secondary);}
+
+._box-shadow{
+    -webkit-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.5);
+}
+
+body::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  outline: 1px solid var(--yellow);
+}

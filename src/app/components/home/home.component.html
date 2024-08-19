@@ -1,0 +1,13 @@
+<section class="__contenedor w-100 mx-4">
+  <div class="mb-5">
+    <h1>Proyectos</h1>
+    <hr />
+  </div>
+  <div class="__proyectos w-100 d-flex flex-wrap justify-content-between">
+    @for (project of projects; track $index) {
+    <div class="col-xl-5 col-lg-12">
+      <app-projects [data]="project"></app-projects>
+    </div>
+    }
+  </div>
+</section>

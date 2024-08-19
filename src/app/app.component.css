@@ -1,0 +1,13 @@
+.parent {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 3px;
+    }
+
+.__contenedor{
+    
+}
+
+   

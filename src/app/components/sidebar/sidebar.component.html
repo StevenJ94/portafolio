@@ -1,0 +1,253 @@
+<section class="__contenedor d-lg-block d-none">
+  <div
+    class="h-25 __info-me d-flex justify-content-center align-items-center flex-column text-white py-4"
+  >
+    <img src="/img_perfil.png" class="mb-2" alt="" width="130" />
+    <p class="mb-0" style="font-weight: 500">Steven Ruiz</p>
+    <p class="mb-0" style="color: var(--gray)">Desarrollador Front-end</p>
+    <p
+      class="mb-0"
+      style="color: var(--yellow); font-weight: 500; font-size: 15px"
+    >
+      Más de {{ calcularAniosLaborales() }} de experiencía
+    </p>
+  </div>
+  <div class="h-auto __more-info p-4">
+    <div class="w-100 d-flex justify-content-between">
+      <p class="text-white col-6">Residencia:</p>
+      <p class="col-6 text-end" style="color: var(--gray)">Colombia</p>
+    </div>
+    <div class="w-100 d-flex justify-content-between">
+      <p class="text-white col-6">Ciudad:</p>
+      <p class="col-6 text-end" style="color: var(--gray)">Barranquilla</p>
+    </div>
+    <div class="w-100 d-flex justify-content-between">
+      <p class="text-white col-6">Edad:</p>
+      <p class="col-6 text-end" style="color: var(--gray)">29 años</p>
+    </div>
+    <div class="w-100 d-flex justify-content-between">
+      <p class="text-white col-4">Télefono:</p>
+      <p class="col-8 text-break text-end" style="color: var(--gray)">
+        +573006369312
+      </p>
+    </div>
+    <div class="w-100 d-flex justify-content-between">
+      <p class="text-white col-4 mb-0">Correo:</p>
+      <p
+        (click)="copiarTexto()"
+        class="__correo text-break mb-0 col-8 text-end"
+      >
+        {{ "stevenruiz.p94@gmail.com" }}
+      </p>
+    </div>
+  </div>
+  <hr class="mx-4 my-0" />
+  <div class="h-auto __more-info p-4 d-flex flex-column text-start">
+    <p class="h3 text-white">Sobre mi</p>
+    <p class="text-break mb-0 mt-2" style="color: var(--gray)">
+      ¡Hola! Me llamo Steven y soy un desarrollador Frontend con más de 4 años
+      de experiencia en la industria tecnológica. Usando tecnologías como
+      Angular, React. así como en metodologías ágiles como Scrum.
+    </p>
+  </div>
+  <hr class="mx-4 my-0" />
+  <div class="h-auto __more-info p-4 d-flex flex-column text-start">
+    <p class="h3 text-white">Habilidades técnicas</p>
+    <div
+      class="d-flex justify-content-between flex-wrap _habilidades-tecnicas align-items-center"
+    >
+      @for (item of habilidadesTecnicas; track $index) {
+      <div class="d-flex flex-column text-center col-3 mt-2 align-items-center">
+        <i class="{{ item.icon }}"></i>
+        <p class="mb-0 text-uppercase">{{ item.title }}</p>
+      </div>
+      }
+    </div>
+    <!-- <p class="text-break mb-0" style="color: var(--gray)"></p> -->
+  </div>
+  <hr class="mx-4 my-0" />
+
+  <div class="h-auto __more-info p-4 d-flex flex-column text-start">
+    <p class="h3 text-white">Habilidades blandas</p>
+
+    <div class="d-flex flex-wrap mt-2">
+      <div class="col-6" style="color: var(--gray)">
+        <p><i class="fas fa-check"></i> Trabajo en equipo</p>
+      </div>
+      <div class="col-6" style="color: var(--gray)">
+        <p><i class="fas fa-check"></i> Comunicación</p>
+      </div>
+      <div class="col-6" style="color: var(--gray)">
+        <p><i class="fas fa-check"></i> Adaptatividad</p>
+      </div>
+      <div class="col-6" style="color: var(--gray)">
+        <p><i class="fas fa-check"></i> Organización</p>
+      </div>
+      <div class="col-6" style="color: var(--gray)">
+        <p class="mb-0"><i class="fas fa-check"></i> Autonomía</p>
+      </div>
+      <div class="col-6" style="color: var(--gray)">
+        <p class="mb-0"><i class="fas fa-check"></i> Creatividad</p>
+      </div>
+    </div>
+    <p class="text-break mb-0" style="color: var(--gray)"></p>
+  </div>
+  <div class="__redes d-flex justify-content-around align-items-center w-100">
+    <a href="https://github.com/Binar10-7" target="_blank" class="github">
+      <i class="fab fa-github"></i>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/steven-ruiz-50948b200/"
+      target="_blank"
+      class="linkedin"
+    >
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</section>
+
+<section class="d-lg-none d-block __contenedor">
+  <nav class="navbar bg-transparent">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        data-bs-toggle="offcanvas"
+        href="#offcanvasExample"
+        role="button"
+        aria-controls="offcanvasExample"
+      >
+        <i class="fas fa-bars m-1"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div
+    class="offcanvas offcanvas-start"
+    tabindex="-1"
+    id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel"
+  >
+    <div
+      class="offcanvas-header position-absolute bg-transparent"
+      style="right: 0px"
+    >
+      <button
+        type="button"
+        class="btn-close text-white"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div
+      class="h-25 __info-me d-flex justify-content-center align-items-center flex-column text-white py-4"
+    >
+      <img src="/img_perfil.png" class="mb-2" alt="" width="130" />
+      <p class="mb-0" style="font-weight: 500">Steven Ruiz</p>
+      <p class="mb-0" style="color: var(--gray)">Desarrollador Front-end</p>
+      <p
+        class="mb-0"
+        style="color: var(--yellow); font-weight: 500; font-size: 15px"
+      >
+        Más de {{ calcularAniosLaborales() }} de experiencía
+      </p>
+    </div>
+    <div class="h-auto __more-info p-4">
+      <div class="w-100 d-flex justify-content-between">
+        <p class="text-white col-6">Residencia:</p>
+        <p class="col-6 text-end" style="color: var(--gray)">Colombia</p>
+      </div>
+      <div class="w-100 d-flex justify-content-between">
+        <p class="text-white col-6">Ciudad:</p>
+        <p class="col-6 text-end" style="color: var(--gray)">Barranquilla</p>
+      </div>
+      <div class="w-100 d-flex justify-content-between">
+        <p class="text-white col-6">Edad:</p>
+        <p class="col-6 text-end" style="color: var(--gray)">29 años</p>
+      </div>
+      <div class="w-100 d-flex justify-content-between">
+        <p class="text-white col-4">Télefono:</p>
+        <p class="col-8 text-break text-end" style="color: var(--gray)">
+          +573006369312
+        </p>
+      </div>
+      <div class="w-100 d-flex justify-content-between">
+        <p class="text-white col-4 mb-0">Correo:</p>
+        <p
+          (click)="copiarTexto()"
+          class="__correo text-break mb-0 col-8 text-end"
+        >
+          {{ "stevenruiz.p94@gmail.com" }}
+        </p>
+      </div>
+    </div>
+    <hr class="mx-4 my-0" />
+    <div class="h-auto __more-info p-4 d-flex flex-column text-start">
+      <p class="h3 text-white">Sobre mi</p>
+      <p class="text-break mb-0 mt-2" style="color: var(--gray)">
+        ¡Hola! Me llamo Steven y soy un desarrollador Frontend con más de 4 años
+        de experiencia en la industria tecnológica. Usando tecnologías como
+        Angular, React. así como en metodologías ágiles como Scrum.
+      </p>
+    </div>
+    <hr class="mx-4 my-0" />
+    <div class="h-auto __more-info p-4 d-flex flex-column text-start">
+      <p class="h3 text-white">Habilidades técnicas</p>
+      <div
+        class="d-flex justify-content-between flex-wrap _habilidades-tecnicas align-items-center"
+      >
+        @for (item of habilidadesTecnicas; track $index) {
+        <div
+          class="d-flex flex-column text-center col-3 mt-2 align-items-center"
+        >
+          <i class="{{ item.icon }}"></i>
+          <p class="mb-0 text-uppercase">{{ item.title }}</p>
+        </div>
+        }
+      </div>
+      <!-- <p class="text-break mb-0" style="color: var(--gray)"></p> -->
+    </div>
+    <hr class="mx-4 my-0" />
+
+    <div class="h-auto __more-info p-4 d-flex flex-column text-start">
+      <p class="h3 text-white">Habilidades blandas</p>
+
+      <div class="d-flex flex-wrap mt-2">
+        <div class="col-6" style="color: var(--gray)">
+          <p><i class="fas fa-check"></i> Trabajo en equipo</p>
+        </div>
+        <div class="col-6" style="color: var(--gray)">
+          <p><i class="fas fa-check"></i> Comunicación</p>
+        </div>
+        <div class="col-6" style="color: var(--gray)">
+          <p><i class="fas fa-check"></i> Adaptatividad</p>
+        </div>
+        <div class="col-6" style="color: var(--gray)">
+          <p><i class="fas fa-check"></i> Organización</p>
+        </div>
+        <div class="col-6" style="color: var(--gray)">
+          <p class="mb-0"><i class="fas fa-check"></i> Autonomía</p>
+        </div>
+        <div class="col-6" style="color: var(--gray)">
+          <p class="mb-0"><i class="fas fa-check"></i> Creatividad</p>
+        </div>
+      </div>
+      <p class="text-break mb-0" style="color: var(--gray)"></p>
+    </div>
+    <div class="__redes d-flex justify-content-around align-items-center w-100">
+      <a
+        href="https://github.com/Binar10-7"
+        target="_blank"
+        class="github my-3"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/steven-ruiz-50948b200/"
+        target="_blank"
+        class="linkedin my-3"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</section>
