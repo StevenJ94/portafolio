@@ -39,14 +39,14 @@ export class SidebarComponent {
       title: 'Git',
       icon: 'fab fa-git-alt'
     },
-    {
-      title: 'Wordpress',
-      icon: 'fab fa-wordpress'
-    }
+    // {
+    //   title: 'Wordpress',
+    //   icon: 'fab fa-wordpress'
+    // }
   ]
 
-  calcularAniosLaborales() {
-    const fechaInicio = new Date('2019-12-13'); // Fecha de inicio de trabajo
+  ageCalculate(fecha: string) {
+    const fechaInicio = new Date(fecha); // Fecha de inicio de trabajo
     const fechaActual = new Date(); // Fecha actual
 
     let añosLaborales = fechaActual.getFullYear() - fechaInicio.getFullYear();

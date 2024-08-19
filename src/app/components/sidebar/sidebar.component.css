@@ -2,6 +2,15 @@
     background-color: var(--terceary-color);
 }
 
+.__img-perfil{
+  width: 130px !important;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+button:focus {
+  box-shadow: none;
+
+}
 
 .offcanvas{
   background-color: var(--terceary-color);
@@ -18,12 +27,16 @@
 }
 
 .offcanvas::-webkit-scrollbar-thumb {
-background-color: var(--yellow);
-outline: 1px solid var(--yellow);
+background-color: var(--green);
+outline: 1px solid var(--green);
 }
 
 .__info-me{
-    background-color: var(--gray-dark);
+  background-color: var(--terceary-color);
+}
+
+hr {
+  color: var(--green);
 }
 
 .__correo{
@@ -34,7 +47,7 @@ outline: 1px solid var(--yellow);
 }
 
 .__correo:hover{
-    color: var(--yellow);
+    color: var(--green);
 }
 
 .__more-info p{
@@ -48,12 +61,12 @@ outline: 1px solid var(--yellow);
   }
 
   .navbar-toggler {
-    color: var(--yellow);
+    color: var(--green);
     font-size: 18px;
   }
 
   .__more-info p i{
-    color: var(--yellow) !important;
+    color: var(--green) !important;
     font-size: 12px;
     margin-right: 2.5px;    
   }
@@ -71,7 +84,8 @@ outline: 1px solid var(--yellow);
 
   .__redes{
     height: 3.5rem;
-    background-color: var(--dark);
+    background-color: var(--green);
+    color: white;
   }
   
   .__redes a{
@@ -80,10 +94,25 @@ outline: 1px solid var(--yellow);
   }
 
   .__redes i{
+    color: white;
       transition: 0.4s;
   }
 
   a:hover i{
-    color: white;
+    color: var(--gray);
   }
+
+.__titulo-text {
+  color: var(--green) !important;
+}
+
+.__cv {  
+  transition: 0.4s;
+  color: white !important;
+}
+
+.__cv:hover{
+  background-color: var(--white);
+  color: var(--green) !important;
+}
   

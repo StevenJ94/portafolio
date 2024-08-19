@@ -88,7 +88,7 @@
 
 .card__title {
     margin: 0;    
-    color: white;
+    color: var(--green);
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
@@ -120,15 +120,17 @@
  
 }
 
+
 .__correo{
     color: var(--blue) !important;
     cursor: pointer !important;
     transition: 0.3s !important;
+    font-weight: 600;
     
 }
 
 .__correo:hover{
-    color: var(--yellow) !important;
+    color: var(--green) !important;
 }
 
 .__shadow{

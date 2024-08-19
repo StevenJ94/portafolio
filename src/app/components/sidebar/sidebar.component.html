@@ -2,30 +2,38 @@
   <div
     class="h-25 __info-me d-flex justify-content-center align-items-center flex-column text-white py-4"
   >
-    <img src="/img_perfil.png" class="mb-2" alt="" width="130" />
+    <img src="/perfil.png" class="__img-perfil mb-2" alt="" />
     <p class="mb-0" style="font-weight: 500">Steven Ruiz</p>
-    <p class="mb-0" style="color: var(--gray)">Desarrollador Front-end</p>
+    <p class="mb-0" style="color: var(--gray)">Desarrollador Front-End</p>
     <p
       class="mb-0"
-      style="color: var(--yellow); font-weight: 500; font-size: 15px"
+      style="color: var(--green); font-weight: 500; font-size: 15px"
     >
-      Más de {{ calcularAniosLaborales() }} de experiencía
+      + {{ ageCalculate("2019-12-13") }} de experiencía
     </p>
   </div>
-  <div class="h-auto __more-info p-4">
+  <div class="h-auto __more-info px-4 pt-4">
+    <!-- RESIDENCIA -->
     <div class="w-100 d-flex justify-content-between">
-      <p class="text-white col-6">Residencia:</p>
+      <p class="col-6 fw-medium __titulo-text">Residencia:</p>
       <p class="col-6 text-end" style="color: var(--gray)">Colombia</p>
     </div>
+    <!-- RESIDENCIA -->
+    <!-- CIUDAD -->
     <div class="w-100 d-flex justify-content-between">
-      <p class="text-white col-6">Ciudad:</p>
+      <p class="col-6 fw-medium __titulo-text">Ciudad:</p>
       <p class="col-6 text-end" style="color: var(--gray)">Barranquilla</p>
     </div>
+    <!-- CIUDAD -->
+    <!-- EDAD -->
     <div class="w-100 d-flex justify-content-between">
-      <p class="text-white col-6">Edad:</p>
-      <p class="col-6 text-end" style="color: var(--gray)">29 años</p>
+      <p class="col-6 fw-medium __titulo-text">Edad:</p>
+      <p class="col-6 text-end" style="color: var(--gray)">
+        {{ ageCalculate("1994-08-01") }}
+      </p>
     </div>
-    <div class="w-100 d-flex justify-content-between">
+    <!-- EDAD -->
+    <!-- <div class="w-100 d-flex justify-content-between">
       <p class="text-white col-4">Télefono:</p>
       <p class="col-8 text-break text-end" style="color: var(--gray)">
         +573006369312
@@ -34,30 +42,45 @@
     <div class="w-100 d-flex justify-content-between">
       <p class="text-white col-4 mb-0">Correo:</p>
       <p
-        (click)="copiarTexto()"
-        class="__correo text-break mb-0 col-8 text-end"
+      (click)="copiarTexto()"
+      class="__cv text-decoration-none text-white btn w-100 h-100 d-flex align-items-center justify-content-center text-break mb-0 col-8 text-end"
       >
-        {{ "stevenruiz.p94@gmail.com" }}
-      </p>
-    </div>
+      {{ "stevenruiz.p94@gmail.com" }}
+    </p>
+  </div> -->
   </div>
-  <hr class="mx-4 my-0" />
+  <!-- CONTACTO ICONS -->
+  <div class="__redes d-flex justify-content-around align-items-center w-100">
+    <a href="https://github.com/Binar10-7" target="_blank" class="github">
+      <i class="fab fa-github"></i>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/steven-ruiz-50948b200/"
+      target="_blank"
+      class="linkedin"
+    >
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+  <!-- CONTACTO ICONS -->
+  <!-- <hr class="mx-4 my-0 " /> -->
   <div class="h-auto __more-info p-4 d-flex flex-column text-start">
-    <p class="h3 text-white">Sobre mi</p>
+    <p class="h3 __titulo-text">Sobre mi</p>
     <p class="text-break mb-0 mt-2" style="color: var(--gray)">
-      ¡Hola! Me llamo Steven y soy un desarrollador Frontend con más de 4 años
-      de experiencia en la industria tecnológica. Usando tecnologías como
-      Angular, React. así como en metodologías ágiles como Scrum.
+      ¡Hola! Me llamo Steven y soy desarrollador Front-End con más de 4 años de
+      experiencia en la industria tecnológica. Me destaco por trabajar con
+      tecnologías como Angular y React, al igual que con metodologías ágiles
+      como Scrum.
     </p>
   </div>
   <hr class="mx-4 my-0" />
   <div class="h-auto __more-info p-4 d-flex flex-column text-start">
-    <p class="h3 text-white">Habilidades técnicas</p>
+    <p class="h3 __titulo-text">Habilidades técnicas</p>
     <div
       class="d-flex justify-content-between flex-wrap _habilidades-tecnicas align-items-center"
     >
       @for (item of habilidadesTecnicas; track $index) {
-      <div class="d-flex flex-column text-center col-3 mt-2 align-items-center">
+      <div class="d-flex flex-column text-center col-4 mt-2 align-items-center">
         <i class="{{ item.icon }}"></i>
         <p class="mb-0 text-uppercase">{{ item.title }}</p>
       </div>
@@ -68,7 +91,7 @@
   <hr class="mx-4 my-0" />
 
   <div class="h-auto __more-info p-4 d-flex flex-column text-start">
-    <p class="h3 text-white">Habilidades blandas</p>
+    <p class="h3 __titulo-text">Aptitudes</p>
 
     <div class="d-flex flex-wrap mt-2">
       <div class="col-6" style="color: var(--gray)">
@@ -78,7 +101,7 @@
         <p><i class="fas fa-check"></i> Comunicación</p>
       </div>
       <div class="col-6" style="color: var(--gray)">
-        <p><i class="fas fa-check"></i> Adaptatividad</p>
+        <p><i class="fas fa-check"></i> Adaptabilidad</p>
       </div>
       <div class="col-6" style="color: var(--gray)">
         <p><i class="fas fa-check"></i> Organización</p>
@@ -93,15 +116,12 @@
     <p class="text-break mb-0" style="color: var(--gray)"></p>
   </div>
   <div class="__redes d-flex justify-content-around align-items-center w-100">
-    <a href="https://github.com/Binar10-7" target="_blank" class="github">
-      <i class="fab fa-github"></i>
-    </a>
     <a
-      href="https://www.linkedin.com/in/steven-ruiz-50948b200/"
       target="_blank"
-      class="linkedin"
+      href="https://www.linkedin.com/in/steven-ruiz-50948b200/overlay/1635461928089/single-media-viewer/?profileId=ACoAADNUBRkBDmQOWfIFwYiaqjLDSMmek8fB488"
+      class="__cv text-decoration-none btn w-100 h-100 d-flex align-items-center justify-content-center rounded-0"
     >
-      <i class="fab fa-linkedin"></i>
+      Descargar CV
     </a>
   </div>
 </section>
@@ -139,32 +159,40 @@
       ></button>
     </div>
     <div
-      class="h-25 __info-me d-flex justify-content-center align-items-center flex-column text-white py-4"
+      class="h-25 __info-me d-flex justify-content-center align-items-center flex-column text-white my-4"
     >
-      <img src="/img_perfil.png" class="mb-2" alt="" width="130" />
+      <img src="/perfil.png" class="__img-perfil mb-2" alt="" />
       <p class="mb-0" style="font-weight: 500">Steven Ruiz</p>
-      <p class="mb-0" style="color: var(--gray)">Desarrollador Front-end</p>
+      <p class="mb-0" style="color: var(--gray)">Desarrollador Front-End</p>
       <p
         class="mb-0"
-        style="color: var(--yellow); font-weight: 500; font-size: 15px"
+        style="color: var(--green); font-weight: 500; font-size: 15px"
       >
-        Más de {{ calcularAniosLaborales() }} de experiencía
+        + {{ ageCalculate("2019-12-13") }} de experiencía
       </p>
     </div>
-    <div class="h-auto __more-info p-4">
-      <div class="w-100 d-flex justify-content-between">
-        <p class="text-white col-6">Residencia:</p>
+    <div class="h-auto __more-info px-4 pt4">
+      <!-- RESIDENCIA -->
+      <div class="w-100 d-flex justify-content-between mt-lg-0 mt-4">
+        <p class="col-6 __titulo-text">Residencia:</p>
         <p class="col-6 text-end" style="color: var(--gray)">Colombia</p>
       </div>
+      <!-- RESIDENCIA -->
+      <!-- CIUDAD -->
       <div class="w-100 d-flex justify-content-between">
-        <p class="text-white col-6">Ciudad:</p>
+        <p class="col-6 __titulo-text">Ciudad:</p>
         <p class="col-6 text-end" style="color: var(--gray)">Barranquilla</p>
       </div>
+      <!-- CIUDAD -->
+      <!-- EDAD -->
       <div class="w-100 d-flex justify-content-between">
-        <p class="text-white col-6">Edad:</p>
-        <p class="col-6 text-end" style="color: var(--gray)">29 años</p>
+        <p class="col-6 __titulo-text">Edad:</p>
+        <p class="col-6 text-end" style="color: var(--gray)">
+          {{ ageCalculate("1994-08-01") }}
+        </p>
       </div>
-      <div class="w-100 d-flex justify-content-between">
+      <!-- EDAD -->
+      <!-- <div class="w-100 d-flex justify-content-between">
         <p class="text-white col-4">Télefono:</p>
         <p class="col-8 text-break text-end" style="color: var(--gray)">
           +573006369312
@@ -178,26 +206,45 @@
         >
           {{ "stevenruiz.p94@gmail.com" }}
         </p>
-      </div>
+      </div> -->
     </div>
-    <hr class="mx-4 my-0" />
+    <!-- CONTACTO ICONS -->
+    <div class="__redes d-flex justify-content-around align-items-center w-100">
+      <a
+        href="https://github.com/Binar10-7"
+        target="_blank"
+        class="github py-2"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/steven-ruiz-50948b200/"
+        target="_blank"
+        class="linkedin py-2"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <!-- CONTACTO ICONS -->
+    <!-- <hr class="mx-4 my-0 " /> -->
     <div class="h-auto __more-info p-4 d-flex flex-column text-start">
-      <p class="h3 text-white">Sobre mi</p>
+      <p class="h3 __titulo-text">Sobre mi</p>
       <p class="text-break mb-0 mt-2" style="color: var(--gray)">
-        ¡Hola! Me llamo Steven y soy un desarrollador Frontend con más de 4 años
-        de experiencia en la industria tecnológica. Usando tecnologías como
-        Angular, React. así como en metodologías ágiles como Scrum.
+        ¡Hola! Me llamo Steven y soy desarrollador Front-End con más de 4 años
+        de experiencia en la industria tecnológica. Me destaco por trabajar con
+        tecnologías como Angular y React, al igual que con metodologías ágiles
+        como Scrum.
       </p>
     </div>
     <hr class="mx-4 my-0" />
     <div class="h-auto __more-info p-4 d-flex flex-column text-start">
-      <p class="h3 text-white">Habilidades técnicas</p>
+      <p class="h3 __titulo-text">Habilidades técnicas</p>
       <div
         class="d-flex justify-content-between flex-wrap _habilidades-tecnicas align-items-center"
       >
         @for (item of habilidadesTecnicas; track $index) {
         <div
-          class="d-flex flex-column text-center col-3 mt-2 align-items-center"
+          class="d-flex flex-column text-center col-4 mt-2 align-items-center"
         >
           <i class="{{ item.icon }}"></i>
           <p class="mb-0 text-uppercase">{{ item.title }}</p>
@@ -209,7 +256,7 @@
     <hr class="mx-4 my-0" />
 
     <div class="h-auto __more-info p-4 d-flex flex-column text-start">
-      <p class="h3 text-white">Habilidades blandas</p>
+      <p class="h3 __titulo-text">Aptitudes</p>
 
       <div class="d-flex flex-wrap mt-2">
         <div class="col-6" style="color: var(--gray)">
@@ -219,7 +266,7 @@
           <p><i class="fas fa-check"></i> Comunicación</p>
         </div>
         <div class="col-6" style="color: var(--gray)">
-          <p><i class="fas fa-check"></i> Adaptatividad</p>
+          <p><i class="fas fa-check"></i> Adaptabilidad</p>
         </div>
         <div class="col-6" style="color: var(--gray)">
           <p><i class="fas fa-check"></i> Organización</p>
@@ -235,18 +282,11 @@
     </div>
     <div class="__redes d-flex justify-content-around align-items-center w-100">
       <a
-        href="https://github.com/Binar10-7"
         target="_blank"
-        class="github my-3"
+        href="https://www.linkedin.com/in/steven-ruiz-50948b200/overlay/1635461928089/single-media-viewer/?profileId=ACoAADNUBRkBDmQOWfIFwYiaqjLDSMmek8fB488"
+        class="__cv text-decoration-none btn w-100 h-100 d-flex align-items-center justify-content-center rounded-0"
       >
-        <i class="fab fa-github"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/steven-ruiz-50948b200/"
-        target="_blank"
-        class="linkedin my-3"
-      >
-        <i class="fab fa-linkedin"></i>
+        Descargar CV
       </a>
     </div>
   </div>
